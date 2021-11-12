@@ -32,6 +32,7 @@ setInterval(() => {
     vendorId: queueArn,
     customer: faker.name.findName(),
     orderId: uuid(),
+    Message: faker.lorem.sentences(),
     TopicArn: topic
   
   }

@@ -10,10 +10,16 @@ const app = Consumer.create({
     console.log(message.Body)
     console.log(JSON.stringify(message.Body));
   },
-  pollingWaitTimeMs: 1000 + Math.random() * 4000,
+  //pollingWaitTimeMs: 4000,
 })
 
 app.on('error', (err) => {
   console.error(err.message)
 })
+
+// app.on('message_processed', (err) => {
+//   if(err) console.log(err)
+//   console.log('pacage delivered', )
+// })
+
 app.start();
